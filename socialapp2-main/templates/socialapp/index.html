@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socialbook</title>
+    <link rel="stylesheet" href="static/socialMedia.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- default theme of messages -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+</head>
+
+<body>
+
+
+    {% for message in messages %}
+    <script>
+        alertify.set('notifier', 'position', 'top-center');
+        alertify.success('{{ message }}');
+    </script>
+    {% endfor %}
+
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if img_obj %}
+    <h3>Succesfully uploaded : {{img_obj.caption}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+    {% endif %}
+
+
+    </div>
+    <script src="/static/socialMedia.js"></script>
+</body>
+
+</html>

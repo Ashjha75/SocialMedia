@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBook</title>
+    <link rel="stylesheet" href="/static/socialMedia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">           
+            <a href="/" style="text-decoration: none;">
+                <img src="/static/img1\logo.png" class="logo">
+            </a>        
+            <img src="/static/img1\notification.png" class="logo2">
+            <img src="/static/img1\inbox.png" class="logo2">
+            <img src="/static/img1\video.png" class="logo2" onclick="popUp()">
+        </div>
+        <div class="nav-right">
+            
+            <div class="user-icon online" onclick="settingsMenuToggle()">
+                <img src="/static/img1\user-2.png">
+            </div>
+        </div>
+        <!-- settings Menu -->
+        <div class="settings">
+
+            
+
+            <div class="settings-menu">
+                <div class="user-profile">
+                    <img src="/static/img1\user-2.png">
+                    <div>
+                        <p>John Nicholson</p>
+                        <a href="profile.html">See your Profile </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="/static/img1\feedback.png">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to improve</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-link">
+                    <img src="/static/img1\setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy <img src="/static/img1\arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-link">
+                    <img src="/static/img1\help.png" class="settings-icon">
+                    <a href="#">Help & Support <img src="/static/img1\arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-link">
+                    <img src="/static/img1\display.png" class="settings-icon">
+                    <a href="#">Display & Accesibility <img src="/static/img1\arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-link">
+                    <img src="/static/img1\logout.png" class="settings-icon">
+                    <a href="#">Logout<img src="/static/img1\arrow.png" width="10px"></a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </nav>
+
+    <!-- Navbar for small screens -->
+
+    <nav id="nav2">
+        <ul>
+            <li><a href="#"><img src="/static/img1/inbox.png" onclick="LefttSlide()"></a></li>
+            <li><a href="index.html"><img src="/static/img1/home-5-xxl.png"></a></li>
+            <li><a href="#"><img src="/static/img1/notification.png" onclick="rightSlide()"></a></li>
+        </ul>
+    </nav>
+
+    <!-- ====>Profile Page <=====  -->
+
+    <div class="profile-container">
+        <img src="/static/img1\cover.png" class="cover-img">
+
+        <div class="profile-details">
+            <div class="left-profile-detials">
+                <div class="profile-detail-row">
+                    <img src="/static/img1\user-2.png">
+                    <div>
+                        <h3>Jack Nickholson</h3>
+                        <p>120 Friends -20 Mutual</p>
+                        <img src="/static/img1\member-1.png" id="mut-friends">
+                        <img src="/static/img1\member-2.png" id="mut-friends">
+                        <img src="/static/img1\member-3.png" id="mut-friends">
+                        <img src="/static/img1\member-4.png" id="mut-friends">
+                    </div>
+                </div>
+            </div>
+            <div class="right-profile-detials">
+                <button type="button"> <img src="/static/img1\add-friends.png"> Friends</button>
+                <button type="button"> <img src="/static/img1\message.png"> Message</button>
+                <a href="#"><img src="/static/img1\more.png"></a>
+            </div>
+        </div>
+        <div class="profile-info">
+            <div class="info-col">
+
+                <div class="profile-intro">
+                    <h3>Intro</h3>
+                    <p>Believe in yourself and you can do unbelievable things. <img src="/static/img1\feeling.png">
+                    </p>
+                    <hr>
+
+                    <ul>
+                        <li><img src="/static/img1\profile-job.png"> Director at 99Media Ltd. </li>
+                        <li><img src="/static/img1\profile-study.png"> Studied at Amity University</li>
+                        <li><img src="/static/img1\profile-study.png"> Went to DPS Delhi</li>
+                        <li><img src="/static/img1\profile-home.png"> Lives at Bangalore, India</li>
+                        <li><img src="/static/img1\profile-location.png"> From Banglore, India</li>
+
+                    </ul>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Photos</h3>
+                        <a href="#">All Photos</a>
+                    </div>
+
+                    <div class="photo-box">
+                        <div><img src="/static/img1\photo1.png"></div>
+                        <div><img src="/static/img1\photo2.png"></div>
+                        <div><img src="/static/img1\photo3.png"></div>
+                        <div><img src="/static/img1\photo4.png"></div>
+                        <div><img src="/static/img1\photo5.png"></div>
+                        <div><img src="/static/img1\photo6.png"></div>
+                    </div>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Friends</h3>
+                        <a href="#">All Friends</a>
+                    </div>
+                    <p>120 (10 Mutuals) </p>
+                    <div class="friends-box">
+                        <div><img src="/static/img1\member-1.png">
+                            <p>Joseph</p>
+                        </div>
+                        <div><img src="/static/img1\member-2.png">
+                            <p>Nathan</p>
+                        </div>
+                        <div><img src="/static/img1\member-3.png">
+                            <p>George</p>
+                        </div>
+                        <div><img src="/static/img1\member-4.png">
+                            <p>Francis</p>
+                        </div>
+                        <div><img src="/static/img1\member-5.png">
+                            <p>Anthony</p>
+                        </div>
+                        <div><img src="/static/img1\member-6.png">
+                            <p>Micheal</p>
+                        </div>
+                        <div><img src="/static/img1\member-8.png">
+                            <p>Edward</p>
+                        </div>
+                        <div><img src="/static/img1\member-9.png">Bradon</div>
+                        <div><img src="/static/img1\member-7.png">James</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile col">
+
+
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <img src="/static/img1\user-2.png">
+                        <div>
+                            <p>John Nicholson</p>
+                            <small>Public <i class="fa fa-caret-down"></i></small>
+                        </div>
+                    </div>
+
+                    <div class="post-input-container">
+                        <textarea rows="3" placeholder="What's on your Mind , John"></textarea>
+                        <div class="add-post-links">
+                            <a href="#"><img src="/static/img1\live-video.png">Live Video</a>
+                            <a href="#"><img src="/static/img1\photo.png">Photo/Video</a>
+                            <a href="#"><img src="/static/img1\feeling.png">Feeling/Activity</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="/static/img1\user-2.png">
+                            <div>
+                                <p>John Nicholson</p>
+                                <span>June 24 2022, 13:40 Pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                        elit.
+                        Earum corrupti placeat corporis dolores voluptatem iste
+                        <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                    </p>
+                    <img src="/static/img1\feed-image-1.png" class="post-img">
+
+                    <div class="post-row">
+                        <div class="activity-icon">
+                            <div><img src="/static/img1\like-blue.png">12k</div>
+                            <div><img src="/static/img1\comments.png">1.7k</div>
+                            <div><img src="/static/img1\share.png">754</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="/static/img1\user-2.png"><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="/static/img1\user-2.png">
+                            <div>
+                                <p>John Nicholson</p>
+                                <span>June 24 2022, 13:40 Pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                        elit.
+                        Earum corrupti placeat corporis dolores voluptatem iste
+                        <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                    </p>
+                    <img src="/static/img1\feed-image-2.png" class="post-img">
+
+                    <div class="post-row">
+                        <div class="activity-icon">
+                            <div><img src="/static/img1\like-blue.png">12k</div>
+                            <div><img src="/static/img1\comments.png">1.7k</div>
+                            <div><img src="/static/img1\share.png">754</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="/static/img1\user-2.png"><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="/static/img1\user-2.png">
+                            <div>
+                                <p>John Nicholson</p>
+                                <span>June 24 2022, 13:40 Pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                        elit.
+                        Earum corrupti placeat corporis dolores voluptatem iste
+                        <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                    </p>
+                    <img src="/static/img1\feed-image-3.png" class="post-img">
+
+                    <div class="post-row">
+                        <div class="activity-icon">
+                            <div><img src="/static/img1\like-blue.png">12k</div>
+                            <div><img src="/static/img1\comments.png">1.7k</div>
+                            <div><img src="/static/img1\share.png">754</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="/static/img1\user-2.png"><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="/static/img1\user-2.png">
+                            <div>
+                                <p>John Nicholson</p>
+                                <span>June 24 2022, 13:40 Pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                        elit.
+                        Earum corrupti placeat corporis dolores voluptatem iste
+                        <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                    </p>
+                    <img src="/static/img1\feed-image-4.png" class="post-img">
+
+                    <div class="post-row">
+                        <div class="activity-icon">
+                            <div><img src="/static/img1\like-blue.png">12k</div>
+                            <div><img src="/static/img1\comments.png">1.7k</div>
+                            <div><img src="/static/img1\share.png">754</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="/static/img1\user-2.png"><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="/static/img1\user-2.png">
+                            <div>
+                                <p>John Nicholson</p>
+                                <span>June 24 2022, 13:40 Pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                        elit.
+                        Earum corrupti placeat corporis dolores voluptatem iste
+                        <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                    </p>
+                    <img src="/static/img1\feed-image-5.png" class="post-img">
+
+                    <div class="post-row">
+                        <div class="activity-icon">
+                            <div><img src="/static/img1\like-blue.png">12k</div>
+                            <div><img src="/static/img1\comments.png">1.7k</div>
+                            <div><img src="/static/img1\share.png">754</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="/static/img1\user-2.png"><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- -------=========Theme-customize ==========-------->
+
+    <div class="customize-theme">
+        <div class="card">
+            <div class="cross">
+                <img src="/static/img1/arrow.png" onclick="popUp()">
+            </div>
+            <h2>Customize Your View </h2>
+            <p>Manage your  Background here</p>
+
+            <!-- background color -->
+            <div class="background">
+                <h4>Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active1" id="light">
+                        <span></span>
+                        <h5 for="bg-1" >Light</h5>
+                    </div>
+                    <div class="bg-2" id="dim">
+                        <span></span>
+                        <h5 for="bg-2">Dim</h5>
+                    </div>
+                    <div class="bg-3" id="dark1">
+                        <span></span>
+                        <h5 for="bg-3"  color="white" >Dark</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer">
+        <p>Copyright 2022 - @coderash5</p>
+    </div>
+ 
+    <script src="static/socialMedia.js"></script>
+</body>
+
+</html>

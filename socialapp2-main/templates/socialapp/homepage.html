@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBook</title>
+    <link rel="stylesheet" href="/static/socialMedia.css">
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"> -->
+    <!--  -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</head>
+
+<body>
+    <!-- Nav bar  -->
+    <div class="navbar-container">
+        <nav>
+            <div class="nav-left">
+                    <a href="/" style="text-decoration: none;">
+                        <img src="/static/img1\logo.png" class="logo">
+                    </a>
+                <img src="/static/img1\notification.png" class="logo2" id="logo2">
+                <img src="/static/img1\inbox.png" class="logo2" id="logo3">
+                <img src="/static/img1\video.png" class="logo2" onclick="popUp()">
+            </div>
+            <div class="nav-right">
+
+                <div class="user-icon online">
+                <img src="/static\img1\user-2.png" onclick="settingsMenuToggle()"></div>
+                <button onclick="reg()" id="reg-btn">
+                    <i class="fa fa-user"></i>Login</button>  
+            <!-- settings Menu -->
+
+            <div class="settings">               
+
+                <div class="settings-menu">
+                    <div class="user-profile">
+                        <img src="/static\img1\user-2.png">
+
+                        <div>
+                            <p>Ashish jha</p>
+                            <a href="/templates/socialapp/profile.html">See your Profile </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="user-profile">
+                        <img src="/static/img1\feedback.png">
+                        <div>
+                            <p>Give Feedback</p>
+                            <a href="#">Help us to improve</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="settings-link">
+                        <img src="/static/img1\setting.png" class="settings-icon">
+                        <a href="#">Settings & Privacy <img src="/static/img1\arrow.png" width="10px"></a>
+                    </div>
+                    <div class="settings-link">
+                        <img src="/static/img1\help.png" class="settings-icon">
+                        <a href="#">Help & Support <img src="/static/img1\arrow.png" width="10px"></a>
+                    </div>
+                    <div class="settings-link" onclick="popUp()">
+                        <img src="/static/img1\display.png" class="settings-icon">
+                        <a href="#" >Display & Accesibility <img src="/static/img1\arrow.png" width="10px"></a>
+                    </div>
+                    <div class="settings-link">
+                        <img src="/static/img1\logout.png" class="settings-icon">
+                        <a href="signout">Logout<img src="/static/img1\arrow.png" width="10px"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar for small screens -->
+
+        <nav id="nav2">
+            <ul>
+                <li><a href="#"><img src="/static/img1/inbox.png" onclick="LefttSlide()"></a></li>
+                <li><a href="/"><img src="/static/img1/home-5-xxl.png"></a></li>
+                <li><a href="#"><img src="/static/img1/notification.png" onclick="rightSlide()"></a></li>
+            </ul>
+        </nav>
+
+         <!-- messages -->
+    
+
+    </div>
+    <!-- container for the home page which contain the left , main ,right part of the home page  -->
+    <div class="container">
+        <!-- left-sidebar -->
+        <div class="left-sidebar" id="left-sidebar">
+            <div class="imp-links">
+                <a href="#" id="imp-links-1child"><img src="/static/img1\news.png">Lateset news</a>
+                <a href="#"><img src="/static/img1\friends.png">Friends</a>
+                <a href="#"><img src="/static/img1\group.png">Groups</a>
+                <a href="#"><img src="/static/img1\marketplace.png">marketplace</a>
+                <a href="#"><img src="/static/img1\watch.png">Watch</a>
+
+                <span class="helo">
+                    <a href="#"><img src="/static/img1\watch.png">2Watch</a>
+                    <a href="#"><img src="/static/img1\watch.png">Watch</a>
+                    <a href="#"><img src="/static/img1\watch.png">Watch</a>
+                </span>
+                <a href="#" onclick="helo_click()" id="seemore">See More</a>
+            </div>
+
+            <div class="shortcut-links">
+                <p>Your Shortcuts</p>
+                <a href="#"><img src="/static/img1\shortcut-1.png">Web Developers</a>
+                <a href="#"><img src="/static/img1\shortcut-2.png">Web Design</a>
+                <a href="#"><img src="/static/img1\shortcut-3.png">Full Stack Developer</a>
+                <a href="#"><img src="/static/img1\shortcut-4.png">Website Experts</a>
+
+            </div>
+        </div>
+
+
+        <!-- Main-content -->
+        <div class="main-content">
+
+            <div class="storyGallery">
+                <div class="story story1">
+                    <img src="/static/img1\upload.png">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <img src="/static/img1\member-1.png">
+                    <p>Alias</p>
+                </div>
+                <div class="story story3">
+                    <img src="/static/img1\member-2.png">
+                    <p>Jackson</p>
+                </div>
+                <div class="story story4">
+                    <img src="/static/img1\member-3.png">
+                    <p>Samanna</p>
+                </div>
+                <div class="story story5">
+                    <img src="/static/img1/user-3.png">
+                    <p>John </p>
+                </div>
+            </div>
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    
+                    <img src="/static\img1\user-2.png" name="user_profile">
+
+                  
+                    <div>
+                        <p>Ashish jha</p>
+                        <small>Public <i class="fa fa-caret-down"></i></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your Mind , John"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="/static/img1\live-video.png">Live Video</a>
+                        <a href="#"><img src="/static/img1\photo.png">Photo/Video</a>
+                        <a href="#"><img src="/static/img1\feeling.png">Feeling/Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="../static\img1\category-3.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\user-1.png">
+                        <div>
+                            <p>maste (❁´◡`❁)</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static\img1\photo_2022-07-02_21-25-19.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\user-1.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static/img1\feed-image-1.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static\img1\member-6.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static\img1\photo5.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static/img1\feed-image-2.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static/img1\feed-image-3.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\user-2.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static/img1\feed-image-4.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="/static\img1\member-6.png">
+                        <div>
+                            <p>Ashish jha</p>
+                            <span>June 24 2022, 13:40 Pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit <span>@coderash5</span> amet consectetur adipisicing
+                    elit.
+                    Earum corrupti placeat corporis dolores voluptatem iste
+                    <a href="#">#Coderash5</a> <a href="#">#socially</a>
+                </p>
+                <img src="/static/img1\feed-image-5.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icon">
+                        <div><img src="/static/img1\like-blue.png">12k</div>
+                        <div><img src="/static/img1\comments.png">1.7k</div>
+                        <div><img src="/static/img1\share.png">754</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/static\img1\member-6.png"><i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="loadmoreBtn">Load More</button>
+
+        </div>
+
+
+        <!-- right-sidebar -->
+        <div class="right-sidebar">
+            <div id="messages">
+                <div class="heading">
+                    <h6>Messages</h6><i class="fa fa-edit"></i>
+                </div>
+
+                <!-- search box -->
+                <div class="searchbox">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="search messages" class="message-box">
+                </div>
+                <!-- messages-category -->
+                <div class="category">
+                    <h6 class="active"><b>Primary</b></h6>
+                    <h6><b>General</b></h6>
+                    <h6 class="messages-request"><b>Request(7)</b></h6>
+                </div>
+                <!-- Message -->
+                <div id="message">
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-7.png">
+
+                        </div>
+                        <h5>Erias</h5>
+                    </div>
+
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-1.png">
+
+                        </div>
+                        <h5>Alias</h5>
+                    </div>
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-2.png">
+
+                        </div>
+                        <h5>Jackson</h5>
+                    </div>
+                    <div class="online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-3.png">
+
+                        </div>
+                        <h5>Samanna</h5>
+                    </div>
+                </div>
+            </div>
+            <section class="gap"></section>
+
+            <!--  Friend request-->
+            <div class="friend-request">
+                <h4>Request</h4>
+                <div class="request">
+                    <div class="info online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-1.png">
+                        </div>
+                        <h5>Hajia Bintu
+                            <p class="text-muted">8 mutual friends</p>
+                        </h5>
+                    </div>
+                    <div class="action">
+                        <button class="btn-1st">
+                            Accept
+                        </button>
+                        <button class="btn-2nd">
+                            Decline
+                        </button>
+                    </div>
+                </div>
+                <div class="request">
+                    <div class="info online-list">
+                        <div class="online">
+                            <img src="/static/img1\member-1.png">
+                        </div>
+                        <h5>Hajia Bintu
+                            <p class="text-muted">8 mutual friends</p>
+                        </h5>
+                    </div>
+                    <div class="action">
+                        <button class="btn-1st">
+                            Accept
+                        </button>
+                        <button class="btn-2nd">
+                            Decline
+                        </button>
+                    </div>
+                </div>
+                <div class="request">
+                    <div class="info online-list">
+                        <div class="online">
+                            <img src="/static\img1\user-2.png">
+                        </div>
+                        <h5>Hajia Bintu
+                            <p class="text-muted">8 mutual friends</p>
+                        </h5>
+                    </div>
+
+                    <div class="action">
+                        <button class="btn-1st">
+                            Accept
+                        </button>
+                        <button class="btn-2nd">
+                            Decline
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sidebarTitle">
+                <h4>Events</h4>
+                <a href="#">See All</a>
+            </div>
+
+            <div class="event">
+                <div class="levent">
+                    <h3>18</h3>
+                    <span>March</span>
+                </div>
+                <div class="revent">
+                    <h4>Social Media</h4>
+                    <p><i class="fa fa-map-marker"></i> Willson Tech park</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="levent">
+                    <h3>22</h3>
+                    <span>June</span>
+                </div>
+                <div class="revent">
+                    <h4>Mobile Marketing</h4>
+                    <p><i class="fa fa-map-marker"></i> Willson Tech park</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="sidebarTitle">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="/static/img1\advertisement.png" class="sidebarads">
+
+            <div class="sidebarTitle">
+                <h4>Conversations</h4>
+                <a href="#">Hide Chats</a>
+            </div>
+
+
+
+        </div>
+        <!-- end of right-sidebar -->
+    </div>
+    </div>
+
+    </main>
+
+
+    <!-- -------=========Theme-customize ==========-------->
+
+    <div class="customize-theme" id="closepopup">
+        <div class="card">
+            <div class="cross">
+                <img src="/static/img1/arrow.png" onclick="popUp()">
+            </div>
+            <h2>Customize Your View </h2>
+            <p>Manage your  Background here</p>
+
+            <!-- background color -->
+            <div class="background">
+                <h4>Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active1" id="light">
+                        <span></span>
+                        <h5 for="bg-1" >Light</h5>
+                    </div>
+                    <div class="bg-2" id="dim">
+                        <span></span>
+                        <h5 for="bg-2">Dim</h5>
+                    </div>
+                    <div class="bg-3" id="dark1">
+                        <span></span>
+                        <h5 for="bg-3"  color="white" >Dark</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--  -->
+    <div class="footer">
+        <p>Copyright 2022 - @coderash5</p>
+    </div>
+
+    <script src="/static/socialMedia.js"></script>
+</body>
+
+</html>
